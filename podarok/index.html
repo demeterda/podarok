@@ -11,7 +11,7 @@
         }
         .text1 {
             width: 100%;
-            height: 400px;
+            height: 420px;
             background-color: wheat;
             font-size: 20px;
             display: flex;
@@ -29,7 +29,6 @@
     box-sizing: border-box;
 }
 .container1 p {
-    font-size: 16px;
     word-break: break-word;     
     overflow-wrap: break-word;  
     margin: 0;
@@ -57,6 +56,7 @@
     width: 50%;      
     max-width: 50%;   
     padding: 10px;   
+    /* background-color: aqua; */
     box-sizing: border-box;
 }
 .container2 p {
@@ -67,36 +67,33 @@
     font-size: 11px;
 }
 .photo2 {
-    width: 60%;
-    height: 30%;
+    width: 120%;
+    height: 60%;
     background-size: 100% 100%;
-    position: absolute;
+    /* background-color: aquamarine; */
+    position: relative;
+    right: 0%;
+
 }
 .photo3 {
     width: 100%;
     height: 100%;
 }
-/* @media (max-width: 480px) {
-    .container p {
-        font-size: clamp(12px, 4vw, 16px); 
-    }
-} */
-
-
-
-/* p {
-  font-size: 20px;
+.p12 {
+    width: 228px;
+    height: 160px;
+    /* background-color: aquamarine; */
+    position: absolute;
+    top: 153.5%;
+    left: 32.6%;
+    font-size: 16px;
+    word-break: break-word;     
+    overflow-wrap: break-word;  
+    margin: 0;
+    font-size: 11px;
+    /* right: 47.3%; */
 }
-@media (max-width: 1200px) {
-  p {
-    font-size: 20px;
-  }
-}
-@media (max-width: 1200px) {
-  p {
-    font-size: clamp(20px, 4vw, 16px);
-   }
-}  */
+
     </style>
 </head>
 <body>
@@ -127,12 +124,19 @@
         <div class="text2">
         <div class="container2">
             <p>
-            
+            А это уже 23 мая... всего-лишь один день до начала длинной истории нашей жизни, 
+            наполненой как веселыми так и грустными моментами, наполненой обидами, злобами,
+            расстройствами, радостью, весельем, кайфом от жизни. Мы тогда игра в бильярд и боулинг,
+            а я сам развалил 2 чуваков замзазаз
             </p>
         </div>
           <div class="photo2">
             <img class="photo3" src="fotki/photo_2025-08-23_19-36-50.jpg" alt="">
         </div>
+        <p class="p12">
+            то как ты пробовала играть в боулинг это было очень мило, я вообще молчу про бильярд,
+            наблюдать за тобой было так прикольно.
+        </p>
     </div>
 </body>
 </html>
