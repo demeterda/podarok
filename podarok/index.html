@@ -1,142 +1,180 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>podarok dla lubimoi</title>
-    <style>
-        body {
-            background-color: rgba(32, 32, 32, 0.596);
-            font-family: 'Courier New', Courier, monospace;
-        }
-        .text1 {
-            width: 100%;
-            height: 420px;
-            background-color: wheat;
-            font-size: 20px;
-            display: flex;
-            margin-top: 1%;
-            border: 2px black solid;
-        }
-          .row {
-    display: flex;
-    flex-wrap: wrap; 
-  }
-        .container1 {
-    width: 30%;      
-    max-width: 50%;   
-    padding: 10px;   
-    box-sizing: border-box;
-}
-.container1 p {
-    word-break: break-word;     
-    overflow-wrap: break-word;  
-    margin: 0;
-    font-size: 11px;
-}
-.photo {
-        width: 70%;
-        /* height: 80%; */
-        background-size: 100% 100%;
-}
-.photo1 {
-    width: 100%;
-    height: 100%;
-}
-        .text2 {
-            width: 100%;
-            height: 400px;
-            background-color: wheat;
-            font-size: 20px;
-            display: flex;
-            margin-top: 1%;
-            border: 2px black solid;
-        }
-        .container2 {
-    width: 50%;      
-    max-width: 50%;   
-    padding: 10px;   
-    /* background-color: aqua; */
-    box-sizing: border-box;
-}
-.container2 p {
-    font-size: 16px;
-    word-break: break-word;     
-    overflow-wrap: break-word;  
-    margin: 0;
-    font-size: 11px;
-}
-.photo2 {
-    width: 120%;
-    height: 60%;
-    background-size: 100% 100%;
-    /* background-color: aquamarine; */
-    position: relative;
-    right: 0%;
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Подарок для любимой</title>
+<style>
+    * { box-sizing: border-box; margin:0; padding:0; }
+    body {
+        font-family: 'Courier New', Courier, monospace;
+        background: #f0f4f8;
+        color: #333;
+        line-height: 1.5;
+    }
+    h1 { text-align:center; padding:20px; color:#444; }
+    p { padding:0 10px 10px 10px; font-size: 14px; }
 
-}
-.photo3 {
-    width: 100%;
-    height: 100%;
-}
-.p12 {
-    width: 228px;
-    height: 160px;
-    /* background-color: aquamarine; */
-    position: absolute;
-    top: 153.5%;
-    left: 32.6%;
-    font-size: 16px;
-    word-break: break-word;     
-    overflow-wrap: break-word;  
-    margin: 0;
-    font-size: 11px;
-    /* right: 47.3%; */
-}
+    .block {
+        width: 100%;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transition: transform 0.3s;
+        animation: fadeIn 1s ease-in-out;
+    }
+    .block:hover { transform: scale(1.02); }
 
-    </style>
+    .text-half, .photo-half {
+        flex: 1;
+        padding: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .photo-half img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 12px;
+        object-fit: cover;
+    }
+
+    .row { flex-direction: row; }
+    .row.reverse { flex-direction: row-reverse; }
+
+    @media (max-width: 600px){
+        .row, .row.reverse { flex-direction: column; }
+    }
+
+    @keyframes fadeIn {
+        from { opacity:0; transform: translateY(20px); }
+        to { opacity:1; transform: translateY(0); }
+    }
+
+    /* Градиенты для каждого блока */
+    .block:nth-child(1) { background: linear-gradient(135deg, #ffe6f0, #ffd6e8); }
+    .block:nth-child(2) { background: linear-gradient(135deg, #e0f7ff, #c2f0ff); }
+    .block:nth-child(3) { background: linear-gradient(135deg, #e6ffe6, #ccffcc); }
+    .block:nth-child(4) { background: linear-gradient(135deg, #fff4e6, #ffe0cc); }
+    .block:nth-child(5) { background: linear-gradient(135deg, #f0e6ff, #d6ccff); }
+    .block:nth-child(6) { background: linear-gradient(135deg, #fff0f0, #ffd6d6); }
+    .block:nth-child(7) { background: linear-gradient(135deg, #e6fff4, #ccffeb); }
+    .block:nth-child(8) { background: linear-gradient(135deg, #fff8e6, #ffeacc); }
+    .block:nth-child(9) { background: linear-gradient(135deg, #e6f0ff, #ccd9ff); }
+    .block:nth-child(10){ background: linear-gradient(135deg, #ffe6f4, #ffccdf); }
+    .block:nth-child(11){ background: linear-gradient(135deg, #f0ffe6, #dcffcc); }
+    .block:nth-child(12){ background: linear-gradient(135deg, #fff0e6, #ffd6cc); }
+</style>
 </head>
 <body>
-    <center><h1 class="hi">Привет любимая</h1></center>
-    <p>
-    Знаешь, в начале нашего общения я даже не мог представить что в скорем времени мы начнем встречаться и все будет на столько круто. <br>
+
+<h1>Привет любимая</h1>
+<p style="text-align:center; max-width:90%; margin:auto;">
+Знаешь, в начале нашего общения я даже не мог представить что в скорем времени мы начнем встречаться и все будет на столько круто. <br>
     На этой странице я бы хотел запечятлить некоторые наши моменты за время наших отношений. <br>
     Может и не супер красиво, но зато от всей души и максимально
     на сколько это только возможно искренне. 
     Я тебя очень люблю и я думаю ты прекрасно это знаешь. Я очень тебе благодарен за то что ты меня до сих пор терпишь, 
     а зная мой характер это очень тяжело. Я очень надеюсь что наши отношения продержатся до смерти.
     Я тебя очень сильно люблю, ты мой смысл жизни. <br> Ладно, это все конечно очень хорошо, но все-же зачем-то ты сюда зашла, правильно?
-    </p>
-    <div class="text1">
-        <div class="photo">
-            <img class="photo1" src="fotki/photo_2025-08-23_19-36-52.jpg" alt="">
-        </div>
-        <div class="container1">
-            <p>
-                А вот и первая наша совместная фотка, сделана она была 21 мая
+</p>
+
+<!-- 12 блоков -->
+<div class="block">
+    <div class="text-half">А вот и первая наша совместная фотка, сделана она была 21 мая
                 и я тогда даже подумать не мог что всего-лишь через каких-то 
                 3 дня мы станем встречаться. Это был такой прекрасный день,
                 мы дурачились как маленькие детки и это было так круто, никогда 
-                такого не ощущал, это было кайфово. Спасибо тебе за тот прекрасный день
-            </p>
-        </div>
+                такого не ощущал, это было кайфово. Спасибо тебе за тот прекрасный денью</div>
+    <div class="photo-half"><img src="fotki/photo_2025-08-23_19-36-52.jpg" alt="Фото 1"></div>
+</div>
+
+<div class="block">
+    <div class="photo-half"><img src="fotki/photo_2025-08-23_19-36-50.jpg" alt="Фото 2"></div>
+    <div class="text-half">А это уже 23 мая... всего-лишь один день до начала длинной истории нашей жизни, 
+            наполненой как <br> веселыми так и грустными моментами, наполненой обидами, злобами,
+            расстройствами, радостью, весельем, кайфом от жизни. Мы тогда игра в <br> бильярд и боулинг,
+            а я сам развалил 2 чуваков замзазаз. То как ты пробовала играть в боулинг это было очень мило, я вообще молчу про бильярд,
+            наблюдать за тобой было так прикольно. Пока я пишу эту страницу я тут чуть не плачу когда вспоминаю <br> это все и как это было в живую,
+            никто мне не давал столько мотивации, хорошего настроения, спасибо <br> тебе за это все, ты для меня много значишь.</div>
+</div>
+
+<div class="block row">
+    <div class="text-half">
+        А это уже 29 мая, которое мы провели в прекрасной обстановке, когда готовили пиццу и попивали полу-сладким
+        белым вином ммм... как-же было вкусно, нужно будет обязательно повторить. я никогда в жизни не пробовал пиццы 
+        лучше чем эта. Не потому что были какие-то особенные ингредиенты, а дело в том что мы готовили вместе. В этой
+        пицце больше любви чем у любой пары в этом мире. Это было так вкусно что у меня аж слюньки потекли :)
     </div>
-        <div class="text2">
-        <div class="container2">
-            <p>
-            А это уже 23 мая... всего-лишь один день до начала длинной истории нашей жизни, 
-            наполненой как веселыми так и грустными моментами, наполненой обидами, злобами,
-            расстройствами, радостью, весельем, кайфом от жизни. Мы тогда игра в бильярд и боулинг,
-            а я сам развалил 2 чуваков замзазаз
-            </p>
-        </div>
-          <div class="photo2">
-            <img class="photo3" src="fotki/photo_2025-08-23_19-36-50.jpg" alt="">
-        </div>
-        <p class="p12">
-            то как ты пробовала играть в боулинг это было очень мило, я вообще молчу про бильярд,
-            наблюдать за тобой было так прикольно.
-        </p>
+    <div class="photo-half"><img src="fotki/photo_2025-09-17_22-05-56.jpg" alt="Фото 3"></div>
+</div>
+
+<div class="block row reverse">
+    <div class="text-half"> А это фотка с 30 мая, тут мы уже почти целую неделю вместе и вдвоем 
+                            не можем даже преставить что без друг друга не сможем и дня провести
+                            и это день когда мы дурачились как маленькие детки, толкались танцевали, целовались
+                            и это было так мило, так прикольно. Вспоминая этот момент единственное что хочется
+                            это улыбатся. Знаешь, это так приятно вспоминать те моменты, это было как-будто вчера
+                            а на самом деле с того момента уже прошло 4 месяца, это так круто.
+                            </div>
+    <div class="photo-half"><img src="fotki/photo_2025-08-23_19-32-31.jpg" alt="Фото 4"></div>
+</div>
+
+<div class="block">
+    <div class="text-half">А это уже 31 мая, ровно неделя как мы вместе. И это было прекрасно, как же мы тогда круто поплавали, 
+                           играли в карты и просто веселились, это было так круто, так мило. Я думаю что нам точно нужно будет 
+                           туда вернутся и поплавать именно 31 мая. Ты меня тогда так сильно поразила своей красотой что я думал 
+                           что я прям в воде сознание потеряю и придется тебе спасать меня. А помишь как мы пару дней после встретились
+                           там-же когда ты была со Стасей, я думал ты не захочешь прийти и не хотел вам помешать и был так рад что ты пришла
+                           к сожалению не мог этого нормально показать потому что плохо себя чувствовал, но знай, радости были полные штаны.
+                        </div>
+    <div class="photo-half"><img src="fotki/photo_2025-08-23_19-36-11.jpg" alt="Фото 5"></div>
+</div>
+
+<div class="block">
+    <div class="photo-half"><img src="fotki/photo_2025-08-23_19-37-21.jpg" alt="Фото 6"></div>
+    <div class="text-half">
+        2 июня. Ты наверное задашься вопросом почему же я добавил эту дату сюда. А ответ прост, тот вечер был что-то с чем-то,
+        лил дождь как и всегда и мы сели под мост и я достал гитару и начал играть то что умел, и ты у меня спросила научился ли 
+        я играть группу крови, а я не умел, но решил попробовать выучить. И у меня получилось, для меня эта песня была самой главной 
+        целью игры на гитаре и теперь эта песня на всегда у меня будет ассоциируваться с тобой.
     </div>
+</div>
+
+<div class="block row">
+    <div class="text-half">Текст слева (блок 7)</div>
+    <div class="photo-half"><img src="fotki/photo7.jpg" alt="Фото 7"></div>
+</div>
+
+<div class="block row reverse">
+    <div class="text-half">Текст справа (блок 8)</div>
+    <div class="photo-half"><img src="fotki/photo8.jpg" alt="Фото 8"></div>
+</div>
+
+<div class="block">
+    <div class="text-half">Текст сверху (блок 9)</div>
+    <div class="photo-half"><img src="fotki/photo9.jpg" alt="Фото 9"></div>
+</div>
+
+<div class="block">
+    <div class="photo-half"><img src="fotki/photo10.jpg" alt="Фото 10"></div>
+    <div class="text-half">Текст снизу (блок 10)</div>
+</div>
+
+<div class="block row">
+    <div class="text-half">Текст слева (блок 11)</div>
+    <div class="photo-half"><img src="fotki/photo11.jpg" alt="Фото 11"></div>
+</div>
+
+<div class="block row reverse">
+    <div class="text-half">Текст справа (блок 12)</div>
+    <div class="photo-half"><img src="fotki/photo12.jpg" alt="Фото 12"></div>
+</div>
+
 </body>
 </html>
